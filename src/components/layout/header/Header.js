@@ -1,9 +1,15 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import './header.css'
 import * as Faicons from 'react-icons/fa';
 import { DEFAULT_IMAGEM_THUMBNAIL } from '../../../config/Config';
 
-const Header = () => {
+const Header = ({toggleHeader}) => {
+
+    const [toggle, setToggle] = useState(false);
+    const toggleClick = () =>{
+        setToggle(!toggle);
+        toggleHeader(toggle);
+    }
   return (
     <Fragment>
         <header className='app-header'>
@@ -14,7 +20,7 @@ const Header = () => {
             </div>
 
             <div className='app-toggle'>
-                <i>
+                <i onClick={()=>toggleClick()}>
                     <Faicons.FaBars/>
                 </i>
             </div>

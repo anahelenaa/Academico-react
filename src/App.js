@@ -1,11 +1,12 @@
 import { Fragment } from 'react';
 import './App.css';
 import Layout from './components/layout/Layout';
+import Rotas from './rotas/Rotas';
 
 function App() {
   return (
     <Fragment>
-      <Layout/>
+      <Rotas/>
     </Fragment>
   );
 }

@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import * as BsIcons from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import './showItens.css';
 
 const ShowItens = ({ item }) => {
     const [open, setOpen] = useState(false);
@@ -39,7 +40,7 @@ const ShowItens = ({ item }) => {
     }else{
         return (
             <Fragment>
-                <Link to={item.path || '#'} className='app-sidebar-item'>
+                <Link to={item.path || '#'} className='app-sidebar-item plain'>
                     {item.icon && <i>{item.icon}</i>}
                     {item.page}     
                 </Link>

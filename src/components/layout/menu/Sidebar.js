@@ -3,10 +3,10 @@ import itens from './SidebarData';
 import './sidebar.css';
 import ShowItens from './ShowItens';
 
-const Sidebar = ({ toggle }) => {
+const Sidebar = ({ toggleSidebar }) => {
   return (
     <Fragment>
-        <div className= {toggle ? 'app-sidebar active' : 'app-sidebar'}>
+        <div className= {toggleSidebar ? 'app-sidebar active' : 'app-sidebar'}>
           {
             itens.map((item, index)=>{
               return (
